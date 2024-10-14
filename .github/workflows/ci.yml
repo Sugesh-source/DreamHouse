@@ -111,8 +111,8 @@ jobs:
 
             # Assign permissionset to the user in scratch org
             - name: 'Assign permissionset for Contact Email Access'
-              run: sf org assign permset -n ContactFieldAccess
-
+              run: sf org assign permset -n ContactFieldAccess || echo "Permission Set already assigned, continuing..."
+              
             # Upsert Contacts
             - name: 'Upsert contacts'
               run: sf data upsert bulk -s Contact -f ./data/contacts-data.json -i Email
