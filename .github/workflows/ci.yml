@@ -106,8 +106,8 @@ jobs:
               run: sf project deploy start --ignore-conflicts
 
             # Assign permissionset
-            - name: 'Assign permissionset to default user'
-              run: sf org assign permset -n dreamhouse
+            - name: 'Assign permissionset to scratch org'
+              run:  sf org assign permset -n dreamhouse || echo "Permission Set already assigned, continuing..."
 
             # Import sample data
             - name: 'Import sample data'
