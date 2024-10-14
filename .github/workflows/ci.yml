@@ -107,7 +107,7 @@ jobs:
 
             # Assign permissionset
             - name: 'Assign permissionset to scratch org'
-              run:  sf org assign permset -n dreamhouse || echo "Permission Set already assigned, continuing..."
+              run: sf org assign permset -n dreamhouse || echo "Permission Set already assigned, continuing..."
 
             # Import sample data
             - name: 'Import sample data'
