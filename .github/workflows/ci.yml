@@ -109,9 +109,21 @@ jobs:
             - name: 'Assign permissionset to scratch org'
               run: sf org assign permset -n dreamhouse || echo "Permission Set already assigned, continuing..."
 
+            # Upsert Contacts
+            - name: 'Upsert contacts'
+              run: sf data upsert -s Contact -f ./data/contacts-data.json -i Email
+
+            # Upsert Brokers
+            - name: 'Upsert Brokers'
+              run: sf data upsert -s Broker__c -f ./data/brokers-data.json -i Email__c
+
+            # Upsert Properties
+            - name: 'Upsert Properties'
+              run: sf data upsert -s Property__c -f ./data/properties-data.json -i Address__c
+
             # Import sample data
-            - name: 'Import sample data'
-              run: sf data tree import -p ./data/sample-data-plan.json
+            # - name: 'Import sample data'
+            #   run: sf data tree import -p ./data/sample-data-plan.json
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
