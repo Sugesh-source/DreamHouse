@@ -8,7 +8,8 @@
             "FirstName": "Brad",
             "LastName": "Holmes",
             "Phone": "617-555-0143",
-            "Email": "bholmes@goodmail.com"
+            "Email": "bholmes@goodmail.com",
+            "External_Email_ID__c": "bholmes@goodmail.com"
         },
         {
             "attributes": {
@@ -18,7 +19,8 @@
             "FirstName": "Leslie",
             "LastName": "Martin",
             "Phone": "617-555-0112",
-            "Email": "leslie@pentagon.com"
+            "Email": "leslie@pentagon.com",
+            "External_Email_ID__c": "leslie@pentagon.com"
         },
         {
             "attributes": {
@@ -28,7 +30,8 @@
             "FirstName": "July",
             "LastName": "Walker",
             "Phone": "617-555-0170",
-            "Email": "julywalker@brain.com"
+            "Email": "julywalker@brain.com",
+            "External_Email_ID__c": "julywalker@brain.com"
         },
         {
             "attributes": {
@@ -38,7 +41,8 @@
             "FirstName": "Anna",
             "LastName": "Jones",
             "Phone": "617-555-0181",
-            "Email": "annaj@mymail.com"
+            "Email": "annaj@mymail.com",
+            "External_Email_ID__c": "annaj@mymail.com"
         },
         {
             "attributes": {
@@ -48,7 +52,8 @@
             "FirstName": "John",
             "LastName": "Connor",
             "Phone": "617-555-0133",
-            "Email": "jconnor@goodmail.com"
+            "Email": "jconnor@goodmail.com",
+            "External_Email_ID__c": "jconnor@goodmail.com"
         },
         {
             "attributes": {
@@ -58,7 +63,8 @@
             "FirstName": "Sugantha",
             "LastName": "Suresh",
             "Phone": "617-555-0134",
-            "Email": "sugesh@goodmail.com"
+            "Email": "sugesh@goodmail.com",
+            "External_Email_ID__c": "sugesh@goodmail.com"
         }
     ]
 }

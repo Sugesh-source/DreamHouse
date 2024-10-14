@@ -115,7 +115,7 @@ jobs:
 
             # Upsert Contacts
             - name: 'Upsert contacts'
-              run: sf data upsert bulk -s Contact -f ./data/contacts-data.json -i Email
+              run: sf data upsert bulk -s Contact -f ./data/contacts-data.json -i External_Email_ID__c
 
             # Upsert Brokers
             - name: 'Upsert Brokers'
