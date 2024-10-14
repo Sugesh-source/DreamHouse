@@ -111,15 +111,15 @@ jobs:
 
             # Upsert Contacts
             - name: 'Upsert contacts'
-              run: sf data upsert -s Contact -f ./data/contacts-data.json -i Email
+              run: sf data upsert bulk -s Contact -f ./data/contacts-data.json -i Email
 
             # Upsert Brokers
             - name: 'Upsert Brokers'
-              run: sf data upsert -s Broker__c -f ./data/brokers-data.json -i Email__c
+              run: sf data upsert bulk -s Broker__c -f ./data/brokers-data.json -i Email__c
 
             # Upsert Properties
             - name: 'Upsert Properties'
-              run: sf data upsert -s Property__c -f ./data/properties-data.json -i Address__c
+              run: sf data upsert bulk -s Property__c -f ./data/properties-data.json -i Address__c
 
             # Import sample data
             # - name: 'Import sample data'
