@@ -109,13 +109,17 @@ jobs:
             - name: 'Assign permissionset to scratch org'
               run: sf org assign permset -n dreamhouse || echo "Permission Set already assigned, continuing..."
 
+            # Assign permissionset to the user in scratch org
+            - name: 'Assign permissionset for Contact Email Access'
+              run: sf org assign permset -n ContactFieldAccess
+
             # Upsert Contacts
             - name: 'Upsert contacts'
               run: sf data upsert bulk -s Contact -f ./data/contacts-data.json -i Email
 
             # Upsert Brokers
             - name: 'Upsert Brokers'
-              run: sf data upsert bulk -s Broker__c -f ./data/brokers-data.json -i Email__c
+              run: sf data upsert bulk -s Broker__c -f ./data/brokers-data.json -i Broker_Id__c
 
             # Upsert Properties
             - name: 'Upsert Properties'
