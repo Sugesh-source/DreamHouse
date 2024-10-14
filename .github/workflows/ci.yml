@@ -91,9 +91,9 @@ jobs:
             - name: 'Authenticate Dev Hub'
               run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
-            # Create scratch org
+            # Set the scratch org as default
             - name: 'Create scratch org'
-              run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1
+              run: sf config set defaultusername=Dreamhouse-dev
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
@@ -118,10 +118,10 @@ jobs:
                   token: ${{ secrets.CODECOV_TOKEN }}
                   flags: Apex
 
-            # Housekeeping
-            - name: 'Delete scratch org'
-              if: always()
-              run: sf org delete scratch -p -o scratch-org
+            # # Housekeeping
+            # - name: 'Delete scratch org'
+            #   if: always()
+            #   run: sf org delete scratch -p -o scratch-org
 
     # trigger-packaging:
     #     runs-on: ubuntu-latest

@@ -49,6 +49,17 @@
             "LastName": "Connor",
             "Phone": "617-555-0133",
             "Email": "jconnor@goodmail.com"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "Contact5Ref"
+            },
+            "FirstName": "Sugantha",
+            "LastName": "Suresh",
+            "Phone": "617-555-0133",
+            "Email": "sugesh@goodmail.com"
         }
+
     ]
 }
